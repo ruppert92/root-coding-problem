@@ -1,8 +1,5 @@
 import unittest
-import sys
-sys.path.append("../")
 from averageSpeedReport import DriverData, GetDriverData
-
 
 class TestDriverData(unittest.TestCase):
     def test_avgSpeed_zero(self):
@@ -45,19 +42,19 @@ class TestDriverData(unittest.TestCase):
 class TestImportingDriverData(unittest.TestCase):
     def test_simple_input(self):
         "Test that simple input generates expected output"
-        driverDataList = GetDriverData("simpleInput.txt")
+        driverDataList = GetDriverData("tests/simpleInput.txt")
         self.assertEqual(len(driverDataList), 3)
         self.assertEqual(driverDataList[0].name, "Lauren")
         self.assertEqual(driverDataList[2].name, "Kumi")
 
     def test_long_input(self):
         "Test that more complicated input generates expected output"
-        driverDataList = GetDriverData("longInput.txt")
+        driverDataList = GetDriverData("tests/longInput.txt")
         self.assertEqual(len(driverDataList), 5)
         self.assertEqual(driverDataList[0].name, "Kumi")
         self.assertEqual(driverDataList[1].name, "Dan")
         self.assertEqual(driverDataList[2].name, "Lauren")
-        self.assertEqual(driverDataList[3].name, "Zack")
+        self.assertEqual(driverDataList[3].name, "Bob")
         self.assertEqual(driverDataList[4].name, "Billy")
         self.assertEqual(driverDataList[4].totalDistance, 0)
 

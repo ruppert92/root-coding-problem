@@ -5,9 +5,9 @@ Ex: python3 ./averageSpeedReport.py input.txt
 
 
 ## Running the unit tests
-To run the unit tests, navigate to the tests directory and run the following command. 
+To run the unit tests, navigate to the main directory and run the following command. 
 
-python3 -m unittest averageSpeedReportTests.py
+python3 -m unittest tests/averageSpeedReportTests.py
 
 That should show that 7 test were run with an OK result
 
